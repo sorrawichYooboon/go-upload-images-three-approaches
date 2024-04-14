@@ -18,7 +18,7 @@ This is a simple RESTful API for managing image uploads. It provides three diffe
 
 ## Usage
 
-### Direct Upload
+### 1. Direct Upload
 
 Endpoint: `POST /upload-image/direct`
 
@@ -38,7 +38,7 @@ curl -X POST -F "image=@/path/to/image.jpg" http://localhost:8080/upload-image/d
 }
 ```
 
-### Base64 Upload
+### 2. Base64 Upload
 
 Endpoint: `POST /upload-image/base64/:image-name`
 
@@ -58,7 +58,7 @@ curl -X POST -F "image=base64string" http://localhost:8080/upload-image/base64/m
 }
 ```
 
-### Multipart Upload
+### 3. Multipart Upload
 
 Endpoint: `POST /upload-image/multipart`
 
