@@ -8,6 +8,14 @@ This is a simple RESTful API for managing image uploads. It provides three diffe
 
 3. <b>Multipart Upload:</b> Upload multiple images using multipart form data.
 
+## Pros and Cons of Each Approach
+
+| Approach         | Pros                           | Cons                                          |
+| ---------------- | ------------------------------ | --------------------------------------------- |
+| Direct Upload    | Simple and straightforward     | Limited browser support for large files       |
+| Base64 Upload    | No file system access required | Increased payload size due to Base64 encoding |
+| Multipart Upload | Supports multiple file uploads | Slightly more complex to implement            |
+
 ## Usage
 
 ### Direct Upload
@@ -69,11 +77,3 @@ curl -X POST -F "images=@/path/to/image1.jpg" -F "images=@/path/to/image2.jpg" h
   "message": "Files uploaded successfully"
 }
 ```
-
-## Pros and Cons of Each Approach
-
-| Approach         | Pros                           | Cons                                          |
-| ---------------- | ------------------------------ | --------------------------------------------- |
-| Direct Upload    | Simple and straightforward     | Limited browser support for large files       |
-| Base64 Upload    | No file system access required | Increased payload size due to Base64 encoding |
-| Multipart Upload | Supports multiple file uploads | Slightly more complex to implement            |
